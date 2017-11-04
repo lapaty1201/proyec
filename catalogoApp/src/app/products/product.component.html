@@ -1,0 +1,29 @@
+<h1>Bienes Raices</h1>
+<table class='w3-table w3-bordered w3-hoverable'>
+    <tr>
+         <th>NOMBRE:</th>
+         <th>PRECIO:</th>
+         <th>DESCRIPCION:</th>
+         <th>IMAGEN:</th>
+   </tr>
+ 
+ 
+     <tr *ngFor = "let house of houses">
+         <td>{{house.name}}</td>
+         <td>{{house.price}}</td>
+        <td>{{house.description}}</td>
+         
+ 
+         <td><img [src]="house.img" [style.width.px] = "400"[style.padding.px]="8"> </td>
+ 
+         
+         <td>
+             <button class="w3-btn" (click)="updateHouse()">Edit</button>
+             <button class="w3-btn" (click)="removeHouse(house)">Delete</button>
+         </td>
+     </tr>
+ 
+ </table>
+ <div>
+     
+ </div>
